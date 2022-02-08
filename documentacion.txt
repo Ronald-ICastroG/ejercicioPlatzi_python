@@ -1,7 +1,5 @@
-este es el proyecto de prueba en SQlite3, es mi primer intento en solucionar un error en un merge
+El presente proyecto de prueba en SQlite3, es mi primer intento en solucionar un error en un merge
 Espero todo salga bien.
 
-
-
-
+Acá también se pueden realizar cosas interesantes en la rama cabecera.
 Hemos cambiado ese chicharrón, sin embargo master es master y el resto es mentira.
