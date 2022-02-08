@@ -1,0 +1,2 @@
+este es el proyecto de prueba en SQlite3, es mi primer intento en solucionar un error en un merge
+Espero todo salga bien.
