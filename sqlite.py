@@ -1,7 +1,4 @@
-from heapq import merge
 import sqlite3
-
-
 conn=sqlite3.connect('merge.db')
 
 cursor=conn.cursor()
@@ -17,7 +14,7 @@ cursor.execute("""CREATE TABLE IF NOT EXISTS usuarios(
     """);
 
 if conn!=None:
-    print(f"conexion establecida a {merge}")
+    print("conectado con exito")
 
 #Insertar
 
@@ -31,5 +28,48 @@ users=[
        ('Dalia','Morantes',40,'F')
        ]
 
-cursor.executemany("INSERT INTO usuarios values (null,?,?,?,?)",users)
+#cursor.executemany("INSERT INTO usuarios values (null,?,?,?,?)",users)
+#conn.commit()
+
+
+#read
+
+
+"""
+cursor.execute("SELECT * FROM usuarios")
+usuarios=cursor.fetchall()
+
+for usuario in usuarios:
+    print("ID: ",usuario[0])
+    print("Nombre: ",usuario[1])
+    print("Apellidos: ",usuario[2])
+    print("Edad: ",usuario[3])
+    print("Género: ",usuario[4])
+    print("\n ------------------")
+    
 conn.commit()
+"""
+
+#update
+
+cursor.execute("Update usuarios SET nombre='Francisco' WHERE nombre='Pedro'")
+
+conn.commit()
+#rowcount falta
+
+
+
+
+
+#Delete
+cursor.execute("delete from usuarios where nombre='pietro'")
+conn.commit()
+print(cursor.rowcount)
+
+
+
+
+conn.close()
+
+
+
