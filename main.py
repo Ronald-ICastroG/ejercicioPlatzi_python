@@ -7,3 +7,5 @@ print("""-----Menú de opciones----\n
       5. mostrar inventario
       6. salir\n
       """)
+
+opcion=input("Seleccione el # de la opcion: ")
